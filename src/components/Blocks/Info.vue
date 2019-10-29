@@ -1,107 +1,161 @@
 <template>
     <div style="padding: 0 25px;">
         <div v-if="$vuetify.breakpoint.mdAndUp">
-            <v-row class="text-center justify-center" :class="fonts.title">
-                Yulia Kogay
+            <v-row class="text-center justify-center name-title font-weight-bold mt-5" :class="fonts.title">
+                {{$t('name')}}
             </v-row>
-            <v-divider color="#23272a" style="padding: 1px; width: 80px; margin: auto; margin-top: 25px">
+            <v-divider color="#23272a" style="padding: 1px; width: 100px; margin: auto; margin-top: 15px">
             </v-divider>
-            <v-row class="text-center justify-center mt-5" :class="fonts.regular">
-                <i>Analyst</i>
+            <v-row class="text-center justify-center mt-5 body-2">
+                <i>{{$t('position')}}</i>
             </v-row>
         </div>
         <v-col>
             <div class="section-bar infopage">
-                Experience
+                {{$t('experience')}}
             </div>
             <v-col>
                 <div :class="fonts.regular">
-                    Quality Assurance Engineer
+                    {{$t('qatitle')}}
                 </div>
-                <div class="caption">
+                <div class="caption mb-3">
                     01.2019 - 07.2019
                 </div>
-                <div :class="fonts.subtitle">
-                    Manual testing of cryptocurrency exchange platform as web, Android and iOS applications using Jira as a defect tracking tool<br>
-                    Manual testing of REST API using Postman<br>
-                    Automating E2E tests for exchange platform using Selenium, pytest and BDD framework Behave Automating integration tests for P2P exchange API
+                <div :class="fonts.subtitle" v-html="$t('qa-text')">
                 </div>
             </v-col>
             <v-col>
                 <div :class="fonts.regular">
-                    Product Manager / Analyst
+                    {{$t('pm')}}
                 </div>
-                <div class="caption">
+                <div class="caption mb-3">
                     07.2019 - Current
                 </div>
-                <div :class="fonts.subtitle">
-                    Managing large-scale B2B projects <br>
-                    Gathering requirements directly from clients in 10 different countries (including African countries such as Egypt) and stakeholders in Netherlands<br>
-                    Supporting project team, time and budget tracking, generating reports
+                <div :class="fonts.subtitle" v-html="$t('pm-text')">
                 </div>
             </v-col>
             <div class="section-bar infopage">
-                Skills
+                {{$t('skills')}}
             </div>
             <v-col>
-                <v-row justify="space-between" class="50%">
-                    <div>
-                        aaaa
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        {{$t('communication')}}
                     </div>
                     <v-progress-linear
                     class="mt-2"
-                    style="width: 50%"
                     active
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
                     value="80"
-                    color="grey"
+                    color="#23272a"
+                    :class="fonts.skills"
                 ></v-progress-linear>
                 </v-row>
-                <v-row justify="space-between" class="50%">
-                    <div>
-                        aaaa
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        {{$t('lifecycles')}}
                     </div>
                     <v-progress-linear
                     class="mt-2"
-                    style="width: 50%"
                     active
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="60"
-                    color="grey"
+                    value="70"
+                    color="#23272a"
+                    :class="fonts.skills"
                 ></v-progress-linear>
                 </v-row>
-                <v-row justify="space-between" class="50%">
-                    <div>
-                        aaaa
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        Agile
                     </div>
                     <v-progress-linear
                     class="mt-2"
-                    style="width: 50%"
+                    active
+                    background-opacity="0.3"
+                    buffer-value="100"
+                    height="6"
+                    value="80"
+                    color="#23272a"
+                    :class="fonts.skills"
+                ></v-progress-linear>
+                </v-row>
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        UX / UI
+                    </div>
+                    <v-progress-linear
+                    class="mt-2"
+                    :class="fonts.skills"
                     active
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
                     value="75"
-                    color="grey"
+                    color="#23272a"
                 ></v-progress-linear>
                 </v-row>
-                <v-row justify="space-between" class="50%">
-                    <div>
-                        aaaa
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        {{$t('analysis')}}
                     </div>
                     <v-progress-linear
                     class="mt-2"
-                    style="width: 50%"
+                    :class="fonts.skills"
+                    active
+                    background-opacity="0.3"
+                    buffer-value="100"
+                    height="6"
+                    value="65"
+                    color="#23272a"
+                ></v-progress-linear>
+                </v-row>
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        {{$t('manual')}}
+                    </div>
+                    <v-progress-linear
+                    class="mt-2"
+                    :class="fonts.skills"
                     active
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
                     value="93"
-                    color="grey"
+                    color="#23272a"
+                ></v-progress-linear>
+                </v-row>
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        {{$t('automation')}}
+                    </div>
+                    <v-progress-linear
+                    class="mt-2"
+                    :class="fonts.skills"
+                    active
+                    background-opacity="0.3"
+                    buffer-value="100"
+                    height="6"
+                    value="85"
+                    color="#23272a"
+                ></v-progress-linear>
+                </v-row>
+                <v-row justify="space-between">
+                    <div :class="fonts.skills">
+                        {{$t('english')}}
+                    </div>
+                    <v-progress-linear
+                    class="mt-2"
+                    :class="fonts.skills"
+                    active
+                    background-opacity="0.3"
+                    buffer-value="100"
+                    height="6"
+                    value="90"
+                    color="#23272a"
                 ></v-progress-linear>
                 </v-row>
             </v-col>
@@ -116,5 +170,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.name-title {
+  text-transform: uppercase;
+  letter-spacing: .4em;
+}
+.skills-half{
+  width: 50%;
+  max-width: 50%;
+}
+.skills-full{
+  width: 100%;
+  margin: 5px 0;
+}
 </style>

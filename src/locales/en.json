@@ -1,3 +1,23 @@
 {
-    "bonch": "The Bonch-Bruevich Saint-Petersburg State University of Telecommunications"
+    "name": "Yulia Kogay",
+    "position": "Analyst / Project Manager",
+    "bonch": "The Bonch-Bruevich Saint-Petersburg State University of Telecommunications",
+    "faculty": "Faculty of Infocommunication Networks and Systems",
+    "degree": "Bachelor of Program Engineering",
+    "education": "Education",
+    "contact": "Contacts",
+    "experience": "Experience",
+    "hobby": "Interests",
+    "qatitle": "Quality Assurance Engineer",
+    "skills": "Skills",
+    "city": "St. Petersburg, RU",
+    "communication": "Communication and organization",
+    "lifecycles": "Software development lifecycles",
+    "analysis": "Reqirements analysis",
+    "manual": "Manual testing",
+    "automation": "Testing automation",
+    "english": "English",
+    "pm": "Project Manager / Analyst",
+    "pm-text": "Managing large-scale B2B projects<br>Gathering requirements directly from clients in different countries (including Africancountries, such as Nigeria, and stakeholders in Netherlands)<br>Supporting project team, time and budget tracking, reports generating",
+    "qa-text": "Manual testing of cryptocurrency exchange platform as web, Android and iOS applications using Jira as a defect tracking tool<br>Manual testing of REST API using Postman<br>Automating E2E tests for exchange platform using Selenium, pytest and BDD framework Behave <br>Automating integration tests for P2P exchange API"
 }

@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app ref="content">
     <LocaleChanger/>
     <v-content>
       <Main/>
@@ -23,11 +23,18 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+  font-family: Roboto, Helvetica, sans-serif;
+}
 
 .height100 {
   height: 100%;
 }
 
+.about-link {
+  text-decoration: none!important;
+  color: #fff!important;
+}
 .section-bar {
   width: 100%;
   height: 40px;
@@ -39,6 +46,7 @@ export default {
   color: black;
   background-color: white;
   letter-spacing: 4px;
+  margin-top: 20px;
 
   &.infopage {
     background-color: #23272a;

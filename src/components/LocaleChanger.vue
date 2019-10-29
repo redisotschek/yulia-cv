@@ -28,7 +28,7 @@
         fab
         dark
         small
-        color="red"
+        color="#a6c2ce"
         @click="setLocale('ru')"
       >
         ru
@@ -37,7 +37,7 @@
         fab
         dark
         small
-        color="indigo"
+        color="#cea6a6"
         @click="setLocale('en')"
       >
         en

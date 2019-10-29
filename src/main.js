@@ -8,18 +8,20 @@ Vue.config.productionTip = false
 Vue.mixin({
   computed: {
     fonts () {
-      return this.$vuetify.breakpoint.mdAndUp 
-    ? 
+      return this.$vuetify.breakpoint.mdAndUp
+    ?
     {
-      title: 'display-4',
+      title: 'display-2',
       subtitle: 'subtitle-1',
       regular: 'headline',
+      skills: 'skills-half'
     }
     :
     {
-      title: 'display-3',
+      title: 'display-2',
       subtitle: 'subtitle-1',
       regular: 'title',
+      skills: 'skills-full'
     }
     }
   }
