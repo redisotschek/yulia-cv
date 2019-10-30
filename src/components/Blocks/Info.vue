@@ -159,6 +159,11 @@
                 ></v-progress-linear>
                 </v-row>
             </v-col>
+            <div class="pdf">
+              <v-btn class="ma-2" outlined fab color="black" title="PDF file">
+                  <a href="/YuliaKogay.pdf"><v-icon>mdi-printer</v-icon></a>
+              </v-btn>
+          </div>
         </v-col>
     </div>
 </template>
@@ -182,4 +187,14 @@ export default {
   width: 100%;
   margin: 5px 0;
 }
+.pdf{
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0.6;
+& a{
+  color: black;
+  text-decoration: none;
+}
+}
+
 </style>
