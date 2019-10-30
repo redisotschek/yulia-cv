@@ -48,7 +48,7 @@
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="80"
+                    value="75"
                     color="#23272a"
                     :class="fonts.skills"
                 ></v-progress-linear>
@@ -63,7 +63,7 @@
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="70"
+                    value="65"
                     color="#23272a"
                     :class="fonts.skills"
                 ></v-progress-linear>
@@ -78,7 +78,7 @@
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="80"
+                    value="75"
                     color="#23272a"
                     :class="fonts.skills"
                 ></v-progress-linear>
@@ -94,7 +94,7 @@
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="75"
+                    value="70"
                     color="#23272a"
                 ></v-progress-linear>
                 </v-row>
@@ -124,7 +124,7 @@
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="93"
+                    value="88"
                     color="#23272a"
                 ></v-progress-linear>
                 </v-row>
@@ -139,7 +139,7 @@
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="85"
+                    value="80"
                     color="#23272a"
                 ></v-progress-linear>
                 </v-row>
@@ -154,16 +154,14 @@
                     background-opacity="0.3"
                     buffer-value="100"
                     height="6"
-                    value="90"
+                    value="85"
                     color="#23272a"
                 ></v-progress-linear>
                 </v-row>
             </v-col>
-            <div class="pdf">
-              <v-btn class="ma-2" outlined fab color="black" title="PDF file">
-                  <a href="/YuliaKogay.pdf"><v-icon>mdi-printer</v-icon></a>
-              </v-btn>
-          </div>
+            <div v-if="$vuetify.breakpoint.smAndDown" class="pa-5">
+            </div>
+
         </v-col>
     </div>
 </template>

@@ -59,18 +59,38 @@
             </div>
 
             <v-row justify="space-around">
-              <v-btn class="ma-2" outlined fab color="white" href="https://500px.com/julrever" title="photography">
-                  <v-icon>mdi-camera-outline</v-icon>
-              </v-btn>
-              <v-btn class="ma-2" outlined fab color="white" title="development">
-                  <v-icon>mdi-code-tags</v-icon>
-              </v-btn>
-              <v-btn class="ma-2" outlined fab color="white" title="crafts">
-                  <v-icon>mdi-palette-outline</v-icon>
-              </v-btn>
+              <v-tooltip top>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="ma-2" outlined fab color="white" href="https://500px.com/julrever" v-on="on">
+                      <v-icon>mdi-camera-outline</v-icon>
+                  </v-btn>
+                </template>
+                <span>{{$t('photography')}}</span>
+              </v-tooltip>
+              <v-tooltip top>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="ma-2" outlined fab color="white" v-on="on">
+                      <v-icon>mdi-code-tags</v-icon>
+                  </v-btn>
+                </template>
+                <span>{{$t('development')}}</span>
+              </v-tooltip>
+              <v-tooltip top>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="ma-2" outlined fab color="white" v-on="on">
+                      <v-icon>mdi-palette-outline</v-icon>
+                  </v-btn>
+                </template>
+                <span>{{$t('crafts')}}</span>
+              </v-tooltip>
             </v-row>
           </div>
         </v-col>
+        <div class="print-pdf">
+          <v-btn class="ma-2" small outlined fab color="white" title="PDF file">
+              <a href="/YuliaKogay.pdf"><v-icon>mdi-printer</v-icon></a>
+          </v-btn>
+        </div>
     </div>
 </template>
 
@@ -114,6 +134,18 @@ export default {
 
 
 <style lang="scss" scoped>
-
-
+.print-pdf {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  margin: 8px;
+  opacity: 0.7;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
+  &:hover{
+    opacity: 1;
+  }
+}
 </style>

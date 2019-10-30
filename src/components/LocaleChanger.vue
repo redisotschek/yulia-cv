@@ -8,17 +8,19 @@
       absolute
       top
       left
-      direction="bottom"
+      direction="right"
       open-on-hover
       transition="slide-y-reverse-transition"
     >
       <template v-slot:activator>
         <v-btn
           v-model="fab"
-          color="black"
+          color="white"
           dark
           fab
           small
+          outlined
+          class="main-button"
         >
           <v-icon v-if="fab">mdi-close</v-icon>
           <v-icon v-else>mdi-translate</v-icon>
@@ -28,19 +30,19 @@
         fab
         dark
         small
-        color="#a6c2ce"
-        @click="setLocale('ru')"
+        color="#cea6a6"
+        @click="setLocale('en')"
       >
-        ru
+        en
       </v-btn>
       <v-btn
         fab
         dark
         small
-        color="#cea6a6"
-        @click="setLocale('en')"
+        color="#a6c2ce"
+        @click="setLocale('ru')"
       >
-        en
+        ru
       </v-btn>
     </v-speed-dial>
   </div>
@@ -59,3 +61,11 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.main-button {
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+</style>

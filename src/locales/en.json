@@ -17,7 +17,10 @@
     "manual": "Manual testing",
     "automation": "Testing automation",
     "english": "English",
+    "photography": "Photography",
+    "development": "Development",
+    "crafts": "Crafts",
     "pm": "Project Manager / Analyst",
-    "pm-text": "Managing large-scale B2B projects<br>Gathering requirements directly from clients in different countries (including Africancountries, such as Nigeria, and stakeholders in Netherlands)<br>Supporting project team, time and budget tracking, reports generating",
+    "pm-text": "Managing large-scale B2B projects<br>Gathering requirements directly from clients in different countries (including African countries, such as Nigeria, and stakeholders in Netherlands)<br>Supporting project team, time and budget tracking, reports generating",
     "qa-text": "Manual testing of cryptocurrency exchange platform as web, Android and iOS applications using Jira as a defect tracking tool<br>Manual testing of REST API using Postman<br>Automating E2E tests for exchange platform using Selenium, pytest and BDD framework Behave <br>Automating integration tests for P2P exchange API"
 }
