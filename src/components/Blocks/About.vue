@@ -31,7 +31,7 @@
                     </v-col>
                     <v-col cols="9">
                         <div :class="fonts.regular" v-html="item.text"></div>
-                        <div class="overline">{{item.caption}}</div>
+                        <div class="overline">{{$t(item.caption)}}</div>
                     </v-col>
                 </v-row>
             </div>
@@ -94,6 +94,7 @@
     </div>
 </template>
 
+
 <script>
 import jsPDF from 'jspdf'
 import html2canvas from "html2canvas"
@@ -105,11 +106,11 @@ export default {
             {
                 icon: 'mdi-map-outline',
                 text: 'St. Petersburg, RU',
-                caption: 'Address'
+                caption: 'address'
             }, {
                 icon: 'mdi-cellphone-iphone',
                 text: '<a class="about-link" href="tel:+79117288325">+7 (911) 728 83 25</a>',
-                caption: 'Phone Number'
+                caption: 'phone-number'
             }, {
                 icon: 'mdi-email-open-outline',
                 text: '<a class="about-link" href="mailto:julrever@gmail.com">julrever@gmail.com</a>',

@@ -38,126 +38,21 @@
                 {{$t('skills')}}
             </div>
             <v-col>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        {{$t('communication')}}
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="75"
-                    color="#23272a"
-                    :class="fonts.skills"
+              <v-row justify="space-between" v-for="(item, i) in skills" :key="item.text + i">
+                <div :class="fonts.skills">
+                    {{$t(item.text)}}
+                </div>
+                <v-progress-linear
+                class="mt-2"
+                active
+                background-opacity="0.3"
+                buffer-value="100"
+                height="6"
+                :value="item.amount"
+                color="#23272a"
+                :class="fonts.skills"
                 ></v-progress-linear>
-                </v-row>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        {{$t('lifecycles')}}
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="65"
-                    color="#23272a"
-                    :class="fonts.skills"
-                ></v-progress-linear>
-                </v-row>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        Agile
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="75"
-                    color="#23272a"
-                    :class="fonts.skills"
-                ></v-progress-linear>
-                </v-row>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        UX / UI
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    :class="fonts.skills"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="70"
-                    color="#23272a"
-                ></v-progress-linear>
-                </v-row>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        {{$t('analysis')}}
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    :class="fonts.skills"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="65"
-                    color="#23272a"
-                ></v-progress-linear>
-                </v-row>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        {{$t('manual')}}
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    :class="fonts.skills"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="88"
-                    color="#23272a"
-                ></v-progress-linear>
-                </v-row>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        {{$t('automation')}}
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    :class="fonts.skills"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="80"
-                    color="#23272a"
-                ></v-progress-linear>
-                </v-row>
-                <v-row justify="space-between">
-                    <div :class="fonts.skills">
-                        {{$t('english')}}
-                    </div>
-                    <v-progress-linear
-                    class="mt-2"
-                    :class="fonts.skills"
-                    active
-                    background-opacity="0.3"
-                    buffer-value="100"
-                    height="6"
-                    value="85"
-                    color="#23272a"
-                ></v-progress-linear>
-                </v-row>
+              </v-row>
             </v-col>
             <div v-if="$vuetify.breakpoint.smAndDown" class="pa-5">
             </div>
@@ -168,7 +63,43 @@
 
 <script>
 export default {
-    name: 'Info'
+    name: 'Info',
+    data: () => ({
+      skills: [
+        {
+          text: 'communication',
+          amount: 75
+        },
+        {
+          text: 'lifecycles',
+          amount: 65
+        },
+        {
+          text: 'Agile',
+          amount: 75
+        },
+        {
+          text: 'UX / UI',
+          amount: 70
+        },
+        {
+          text: 'analysis',
+          amount: 65
+        },
+        {
+          text: 'manual',
+          amount: 85
+        },
+        {
+          text: 'automation',
+          amount: 76
+        },
+        {
+          text: 'english',
+          amount: 80
+        }
+      ]
+    })
 }
 </script>
 
@@ -194,5 +125,4 @@ export default {
   text-decoration: none;
 }
 }
-
 </style>
